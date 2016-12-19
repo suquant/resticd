@@ -1,7 +1,7 @@
 FROM alpine:edge
 MAINTAINER George Kutsurua <g.kutsurua@gmail.com>
 
-ENV RESTIC_VERSION=0.3.0
+ENV RESTIC_VERSION=0.3.2
 
 RUN apk add --no-cache go git musl-dev openssl && \
     wget https://github.com/restic/restic/releases/download/v${RESTIC_VERSION}/restic-${RESTIC_VERSION}.tar.gz && \
