@@ -11,4 +11,6 @@ RUN apk add --no-cache go git musl-dev openssl && \
     ./build && \
     mv restic /bin/restic && \
     cd ../ && \
-    rm -rf restic-*
+    rm -rf restic-* && \
+    apk del -q go git musl-dev openssl && \
+    rm -rf /var/cache/apk/*
